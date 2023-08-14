@@ -40,8 +40,10 @@ class ScanSpider(scrapy.Spider):
         for product in response.css('li.product'):
             item = ScanProductItem()
             item['title'] = product.css('span.description a::text').get()
-            price_data = product.css('span.price::text').get()
-            item['price'] = price_data.strip() if price_data else "Not Available"
+            price_int = product.css('span.price::text').get().strip()
+            price_frac = product.css('span.price small:last-child::text').get().strip()
+            item['price'] = f"{price_int}{price_frac}" if price_int and price_frac else (
+                price_int if price_int else "Not Available")
             item['SKU'] = product.css('span.linkNo::text').get()
             item['link'] = response.urljoin(product.css('span.description a::attr(href)').get())
 
