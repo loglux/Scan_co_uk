@@ -39,10 +39,10 @@ scrapy crawl scan_search -a search="RTX 3080" -a filter_words="Gigabyte,10GB" -a
 ## Added scan_gpu_spider Functionality
 
 ### Features
-**Search for GPUs**: The spider now crawls multiple GPU pages to fetch the latest GeForce Graphics Cards details. It covers the RTX 4070 series all the way down to the RTX 3060 series.
-**Model Number**: A new feature is added to extract the model number of each GPU.
-**Dimensions**: The spider now also extracts the dimensions of the GPU, providing a better understanding of the physical specs.
-**Chipset**: The spider can now also fetch the chipset information for each product, to offer more in-depth details about the card.
+- **Search for GPUs**: The spider now crawls multiple GPU pages to fetch the latest GeForce Graphics Cards details. It covers the RTX 4070 series all the way down to the RTX 3060 series.
+- **Model Number**: A new feature is added to extract the model number of each GPU.
+- **Dimensions**: The spider now also extracts the dimensions of the GPU, providing a better understanding of the physical specs.
+- **Chipset**: The spider can now also fetch the chipset information for each product, to offer more in-depth details about the card.
 
 ### How to Run scan_gpu_spider
 Navigate to the project directory.
