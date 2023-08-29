@@ -63,7 +63,8 @@ DOWNLOAD_DELAY = 5
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "scan_scraper.pipelines.ScanScraperPipeline": 300,
+    #"scan_scraper.pipelines.ScanScraperPipeline": 300,
+#    'scan_scraper.pipelines.ProductRelatedPipeline': 1,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -96,3 +97,4 @@ FEED_EXPORT_ENCODING = "utf-8"
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'
 
 FEED_EXPORT_FIELDS = ["SKU","price","availability","title", "link"]
+

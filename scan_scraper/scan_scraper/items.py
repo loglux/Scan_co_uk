@@ -11,3 +11,13 @@ class ScanProductItem(scrapy.Item):
     availability = scrapy.Field()
     SKU = scrapy.Field()
     link = scrapy.Field()
+
+class ScanGpuItem(scrapy.Item):
+    title = scrapy.Field()
+    price = scrapy.Field()
+    SKU = scrapy.Field()
+    link = scrapy.Field()
+    availability = scrapy.Field()
+    dimensions = scrapy.Field()
+    model_number = scrapy.Field()
+    chipset = scrapy.Field()
